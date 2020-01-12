@@ -1,9 +1,9 @@
 module.exports = {
         database: {
-        host: 'localhost',
-        user: 'root',
-        password: 'SIsi11--',
-        database: 'database_links',
+        host: 'remotemysql.com',
+        user: 'zXJeEqJL3u',
+        password: 'ziH5fBDBCu',
+        database: 'zXJeEqJL3u',
         
     }
 }
