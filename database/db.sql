@@ -1,7 +1,6 @@
 CREATE DATABASE database_links;
 
 USE database_links;
---USERS TABLE
 CREATE TABLE users(
     id INT(11) NOT NULL,
     username VARCHAR(16) NOT NULL,
@@ -17,7 +16,6 @@ ALTER TABLE users
 
 DESCRIBE users;
 
---LINKS TABLE
 CREATE TABLE links (
     id INT(11) NOT NULL,
     tittle VARCHAR(150) NOT NULL,
