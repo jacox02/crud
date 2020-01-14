@@ -12,7 +12,8 @@
                         <p class="m-2">{{description}}</p>
                         <p>{{timeago created_at}}</p>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="/links/delete/{{id}}"class="btn btn-danger btn-secondary"><i class="fas fa-trash"></i></a>
+                            <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"><a href="/links/delete/{{id}}"class="btn btn-danger btn-secondary"><i class="fas fa-trash"></i></a></button>
+                            
                             <a href="/links/edit/{{id}}"class="btn btn-secondary"><i class="fas fa-edit"></i></a>
                         </div>
                         
