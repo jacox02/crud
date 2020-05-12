@@ -1,20 +1,15 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const passport = require('passport');
+const passport = require("passport");
 //REGISTRO -Muestra de formulario
-router.get('/signup', async (req, res) => {
-    res.render('auth/signup');
+router.get("/signup", async (req, res) => {
+  res.render("auth/signup");
 });
 
 //Registro -OBTENCION DE DATOS
-    router.post('/signup', passport.authenticate('local.signup',{
-        successRedirect: '/profile',
-        failureRedirect: '/signup',
-        failureFlash: true
-    }))
-
-router.get('/profile', (req, res) => {
-    res.send('THIS IS YOUR PROFILE');
+router.post("/signup", (req, res) => {
+  console.log(req.body);
+  res.send("received");
 });
 
-module.exports = router; 
+module.exports = router;
