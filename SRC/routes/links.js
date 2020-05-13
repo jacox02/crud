@@ -1,18 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const pool = require("../database");
-
-//Añadir link a DB
-router.get("/add", (req, res) => {
+const { isLoggedIn } = require("../lib/auth");
+router.get("/add", isLoggedIn, (req, res) => {
   res.render("links/add");
 });
 
-router.post("/add", async (req, res) => {
+router.post("/add", isLoggedIn, async (req, res) => {
   const { tittle, url, description } = req.body;
   const newLink = {
     tittle,
     url,
     description,
+    user_id: req.user.id,
   };
   await pool.query("INSERT INTO links set ?", [newLink]);
   req.flash("success", "Link guardado correctamente");
@@ -20,13 +20,15 @@ router.post("/add", async (req, res) => {
 });
 
 //Imprimir los links en pantalla
-router.get("/", async (req, res) => {
-  const links = await pool.query("SELECT * FROM links");
+router.get("/", isLoggedIn, async (req, res) => {
+  const links = await pool.query("SELECT * FROM links WHERE user_id = ?", [
+    req.user.id,
+  ]);
   res.render("links/list", { links });
 });
 
 //Delete links
-router.get("/delete/:id", async (req, res) => {
+router.get("/delete/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
   await pool.query("DELETE FROM links WHERE id = ?", [id]);
   req.flash("success", "Link borrado correctamente");
@@ -34,13 +36,13 @@ router.get("/delete/:id", async (req, res) => {
 });
 //Edit links
 
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
   const links = await pool.query("SELECT * FROM links WHERE id = ?", [id]);
   res.render("links/edit", { link: links[0] });
 });
 
-router.post("/edit/:id", async (req, res) => {
+router.post("/edit/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
   const { tittle, url, description } = req.body;
   const newLink = {
