@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card ">
+                <div class="car-header">
+                    <div class="text-center">
+                        <h1>Agregar tarea</h1>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="/tasks/add" method="post">
+                        <div class="form-group">
+                            <input type="text" name="tittle" id="" class="form-control" placeholder="Titulo" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="assignment" id="" class="form-control" placeholder="Materia"
+                                autofocus>
+                        </div>
+                        {{!-- <div class="form-group">
+                            <input type="date" name="delivery_date" id="" class="form-control">
+                        </div> --}}
+
+                        <div class="form-group column">
+
+                            <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00"
+                                name="delivery_date" id="example-datetime-local-input">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="description" rows="2" class="form-control"
+                                placeholder="Description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
