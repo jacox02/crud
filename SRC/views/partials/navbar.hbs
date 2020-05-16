@@ -1,46 +1,124 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="/">Jlc < /dev> </a> <button class="navbar-toggler" type="button"
-      data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
+<nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+  <a class="navbar-brand" href="#">JLC DE</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        {{!-- recuerda quitar las propiuedades diasable MMG --}}
+        {{!-- <a class="nav-link disabled" href="/">Home</a> --}}
+      </li>
       {{#if user}}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Universidad
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">Tareas</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/tasks/add">Agregar</a></li>
+              <li><a class="dropdown-item" href="/tasks">Incompletas</a></li>
+              <li><a class="dropdown-item disabled" href="/tasks/done">Completas</a></li>
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/main">Inicio <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/links">Links <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/links/add">Agregar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/tasks">TAKS LIST <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/tasks/add">TASK ADD <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/tasks/edit">TASK EDIT <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/profile">Perfil</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><a href="/logout">Salir <i
-              class="fas fa-power-off"></i></a></button>
-      </span>
+              {{!-- <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                </ul>
+              </li> --}}
+
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown-submenu">
+            <a class="dropdown-item dropdown-toggle" href="#">Links</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/links">Ver links</a></li>
+              {{!-- <li><a class="dropdown-item" href="/tasks/done">Completas</a></li>
+
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                  <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                </ul>
+              </li> --}}
+
+
+
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">Configuracion </a>
+      </li>
+      <div class="buttons" id="userButtons">
+        <a href="/logout"><button type="button" class="btn btn-danger">Salir</button></a>
+      </div>
       {{else}}
-      <span class="navbar-text">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="/signin">Login <i
-              class="fas fa-power-off"></i></a></button>
-      </span>
+      <div id="visitorButtons">
+        <a href="/signin"><button type="button" class="btn btn-danger">Login</button></a>
+        <a href="/signup"><button type="button" class="btn btn-danger">Signup</button></a>
+      </div>
       {{/if}}
-    </div>
+    </ul>
   </div>
 </nav>
+
+<style>
+  .dropdown-submenu {
+    position: relative;
+  }
+
+  .dropdown-submenu a::after {
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 6px;
+    top: .8em;
+  }
+
+  .dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-left: .1rem;
+    margin-right: .1rem;
+  }
+</style>
+
+<script>$('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass('show');
+    }
+    var $subMenu = $(this).next('.dropdown-menu');
+    $subMenu.toggleClass('show');
+
+
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+      $('.dropdown-submenu .show').removeClass('show');
+    });
+
+
+    return false;
+  });</script>

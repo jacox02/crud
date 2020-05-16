@@ -6,7 +6,24 @@ router.get("/tasks/add", isLoggedIn, (req, res) => {
   res.render("tasks/add");
 });
 
-//ADD LINK
+//VIEWS GETTERS
+
+router.get("/tasks", isLoggedIn, async (req, res) => {
+  const tasks = await pool.query("SELECT * FROM tasks WHERE user_id = ?", [
+    req.user.id,
+  ]);
+  res.render("tasks/list", { tasks });
+});
+
+router.get("/tasks/add", isLoggedIn, (req, res) => {
+  res.render("tasks/add");
+});
+
+router.get("/tasks/edit", isLoggedIn, (req, res) => {
+  res.render("tasks/edit");
+});
+
+//ADD TASK
 router.post("/tasks/add", isLoggedIn, async (req, res) => {
   const { tittle, assignment, delivery_date, description } = req.body;
   const newTask = {
@@ -21,21 +38,35 @@ router.post("/tasks/add", isLoggedIn, async (req, res) => {
   res.redirect("/tasks");
 });
 
-//VIEWS GETTERS
-
-router.get("/tasks", isLoggedIn, async (req, res) => {
-  const tasks = await pool.query("SELECT * FROM tasks WHERE user_id = ?", [
-    req.user.id,
-  ]);
-  console.log(tasks);
-  res.render("tasks/list", { tasks });
+//DELETE TASK
+router.get("/tasks/delete/:id", isLoggedIn, async (req, res) => {
+  const { id } = req.params;
+  await pool.query("DELETE FROM tasks WHERE id = ?", [id]);
+  req.flash("succes", "Tarea borrada correctamente");
+  res.redirect("/tasks");
 });
 
-router.get("/tasks/add", isLoggedIn, (req, res) => {
-  res.render("tasks/add");
+//EDITE TASK
+
+router.get("/tasks/edit/:id", isLoggedIn, async (req, res) => {
+  const { id } = req.params;
+  const tasks = await pool.query("SELECT * FROM tasks WHERE id = ?", [id]);
+  res.render("tasks/edit", { tasks: tasks[0] });
 });
 
-router.get("/tasks/edit", isLoggedIn, (req, res) => {
-  res.render("tasks/edit");
+router.post("/tasks/edit/:id", isLoggedIn, async (req, res) => {
+  const { id } = req.params;
+  const { tittle, assignment, delivery_date, description } = req.body;
+  const newTask = {
+    tittle,
+    assignment,
+    description,
+    delivery_date,
+    user_id: req.user.id,
+  };
+  await pool.query("UPDATE tasks set ? WHERE id = ?", [newTask, id]);
+  req.flash("success", "Link editado correctamente");
+  res.redirect("/tasks");
 });
+
 module.exports = router;

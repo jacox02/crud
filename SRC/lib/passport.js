@@ -12,7 +12,6 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      console.log(req.body);
       const rows = await pool.query("SELECT * FROM users WHERE username = ?", [
         username,
       ]);
