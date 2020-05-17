@@ -1,0 +1,43 @@
+<div class="continer text-center">
+    <h1>Tareas</h1>
+</div>
+
+{{#if tasks}}
+<div class="container pt-1">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Materia</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tasks}}
+            <tr>
+
+                <td>
+                    {{tittle}}
+                </td>
+
+                <td>
+                    <p>{{description}}</p>
+                </td>
+                <td>
+                    <a href="/tasks/delete/{{id}}" class="btn btn-danger btn-secondary"><i class="fas fa-trash"></i></a>
+                </td>
+
+            </tr>
+
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+<div class="alert alert-warning alert-dismissible fade show col-12 text-center" role="alert">
+    No hay tareas agregadas <a href="tasks/add" class="alert-link">agrega mas tareas aqui</a>.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{{/if}}

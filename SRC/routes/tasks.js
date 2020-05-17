@@ -15,6 +15,14 @@ router.get("/tasks", isLoggedIn, async (req, res) => {
   res.render("tasks/list", { tasks });
 });
 
+// router.get("/tasks/completed", isLoggedIn, async (req, res) => {
+//   const completedTasks = await pool.query(
+//     "SELECT * FROM tasks WHERE status = 1 AND user_id = ?",
+//     [req.user.id]
+//   );
+//   res.render("tasks/completed", { completedTasks });
+// });
+//RECUERDA AÑADIR STATUS DE COMPPLETADA
 router.get("/tasks/add", isLoggedIn, (req, res) => {
   res.render("tasks/add");
 });
@@ -42,7 +50,7 @@ router.post("/tasks/add", isLoggedIn, async (req, res) => {
 router.get("/tasks/delete/:id", isLoggedIn, async (req, res) => {
   const { id } = req.params;
   await pool.query("DELETE FROM tasks WHERE id = ?", [id]);
-  req.flash("succes", "Tarea borrada correctamente");
+  req.flash("success", "Tarea borrada correctamente");
   res.redirect("/tasks");
 });
 
@@ -65,7 +73,7 @@ router.post("/tasks/edit/:id", isLoggedIn, async (req, res) => {
     user_id: req.user.id,
   };
   await pool.query("UPDATE tasks set ? WHERE id = ?", [newTask, id]);
-  req.flash("success", "Link editado correctamente");
+  req.flash("success", "Tarea editads correctamente");
   res.redirect("/tasks");
 });
 
