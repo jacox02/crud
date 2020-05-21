@@ -1,0 +1,179 @@
+[33mcommit 209d4af7a3f549bd18b4c77adb9909eed9e2c04a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun May 17 14:38:33 2020 -0400
+
+    *Cambio de vista de listas de tareas. *Cambio en los mensajes
+
+[33mcommit 655d22d98b6a0b3494346c6cf1b4d2fca0084a89[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat May 16 13:44:49 2020 -0400
+
+    Lol
+
+[33mcommit 294d1d569b51a06fbe5eec55b761c6783dbec199[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat May 16 13:43:19 2020 -0400
+
+    Cambio en navbar
+
+[33mcommit 6794d0610701dfeb0ff3e49a46bd68f81cb35e22[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat May 16 13:40:48 2020 -0400
+
+    Super cambios, modulo de tareas agregado
+
+[33mcommit a0068a8196434e9152b19c603c107f9d99c48fdd[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Thu May 14 14:30:17 2020 -0400
+
+    Task modules added
+
+[33mcommit fc2230d895c846cf609686726cd513a482e9d497[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Wed May 13 23:51:40 2020 -0400
+
+    Vista de todos los links modificada
+
+[33mcommit 7d4801ee8e16a70b4cd3a0ad2a66a5ec6714296e[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Wed May 13 12:51:51 2020 -0400
+
+    SEGUNDA SUBIDA
+
+[33mcommit 282f82ce6f191b7e2a390beb8f209c1bf475099b[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Wed May 13 12:49:09 2020 -0400
+
+    Proyecto en fase beta
+
+[33mcommit f91e26ae86c39950f4ca5285422df976d16a757b[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Tue May 12 18:29:39 2020 -0400
+
+    MODIFICACION AUTH.JS
+
+[33mcommit f86b1aefcfeaef18823b5ab2f5974ab86b2e11bd[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Tue May 12 18:22:50 2020 -0400
+
+    Modificado formulario SIGNUP.HBS
+
+[33mcommit 4cc73e721d0e35d1992ee8d27de7f165b2b0bcd1[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Tue May 12 12:45:00 2020 -0400
+
+    Modificacion del titulo
+
+[33mcommit 0808cea170b02a5e7fa104e055c1c0e6faa99d4e[m
+Author: Jacob Cuevas <jacobleandro@icloud.com>
+Date:   Tue Jan 21 11:05:46 2020 -0400
+
+    changes added that i dont remember
+
+[33mcommit e5230e46cee722e0593d4496d0243653acb71cf5[m
+Author: Jacob Cuevas <jacobleandro@icloud.com>
+Date:   Sun Jan 19 16:57:16 2020 -0400
+
+    Ultimo cambio hecho
+
+[33mcommit 0de5093ed923ccace5a6cdd8a2c17c0076e6f4be[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Tue Jan 14 12:55:11 2020 -0400
+
+    monton de cambios
+
+[33mcommit b9c39b0641a7f44237e2b421ca03ef0e8f5f1f09[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Tue Jan 14 08:37:02 2020 -0400
+
+    Modificasiones al main.hbs
+
+[33mcommit 0695a3f331254c80689fad163bfdc233eb7746a9[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Mon Jan 13 16:20:19 2020 -0400
+
+    Se añadio un mensaje al index
+
+[33mcommit 1ebed0163dc73a0e2b86fecc04712a31bc1d1041[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 19:03:46 2020 -0400
+
+    Otra mejorita
+
+[33mcommit dfad8125fab1d9e52a0fa5605566994eea1d4820[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 19:01:09 2020 -0400
+
+    Baje con trenza
+
+[33mcommit c07c918b2b13b0548b9485438131be43e161ec95[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 18:58:33 2020 -0400
+
+    Muchs cambios 2
+
+[33mcommit 6ad004ad18ad14c7cecfcf65241f5d3cac061ca2[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 18:56:17 2020 -0400
+
+    Muchos cambios
+
+[33mcommit 9d925a966beab405fd7482537708d1e5112784e1[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 15:49:55 2020 -0400
+
+    config
+
+[33mcommit 3b8224a173fc5fa5db5ce6b56f7481c0379ece3b[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 14:50:09 2020 -0400
+
+    PUSHING ON
+
+[33mcommit 86972e8a955407b7688c0f22e8749b9272ef9233[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 14:01:28 2020 -0400
+
+    toy jalto
+
+[33mcommit fb9a5da75173475b4dfc53a44da510c5d52341d8[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Jan 12 13:58:20 2020 -0400
+
+    toy jalto
+
+[33mcommit b33ef049dfe7aacfe48d601226d0959bfcec0a55[m
+Author: jacox02 <51924295+jacox02@users.noreply.github.com>
+Date:   Sun Jan 12 00:09:38 2020 -0400
+
+    Update package.json
+
+[33mcommit d476e8c963db83fc335ebb83d1bef01618bc26fe[m
+Author: jacox02 <51924295+jacox02@users.noreply.github.com>
+Date:   Sun Jan 12 00:09:24 2020 -0400
+
+    Update package.json
+
+[33mcommit f14627c677d1b2cba156ba129c4a8745f40e41f1[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat Jan 11 23:07:36 2020 -0400
+
+    Arreglo del server
+
+[33mcommit 36af853f4c995be0c5d05b46b0706b324d4de2f4[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat Jan 11 22:36:10 2020 -0400
+
+    Se elimino la carpeta Node_modules
+
+[33mcommit 784f6f3caf2ecf18b8b87fb55f719b5b4f1499cf[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sat Jan 11 22:10:58 2020 -0400
+
+    Subida del app completa
+
+[33mcommit 3061dc70a6299c5f39cbf023049970fde40c77cb[m
+Author: jacox02 <jacobleandro@icloud.com>
+Date:   Sun Dec 29 13:24:19 2019 -0400
+
+    Primer commit

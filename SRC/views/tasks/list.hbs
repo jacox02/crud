@@ -1,14 +1,10 @@
 <div class="continer text-center">
     <h1>Tareas</h1>
 </div>
-
-<div class="container col-lg-10 d-flex justify-content-around flex-dir-column flex-wrap">
-
+<div class="col-lg-12 d-flex flex-dir-column align-content-around flex-wrap">
     {{#if tasks}}
-
-
     {{#each tasks}}
-    <div class="pl-1 pt-1">
+    <div class="pl-4 pt-1">
         <div class="card " style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{tittle}}</h5>
@@ -25,7 +21,6 @@
     </div>
     {{/each}}
 </div>
-
 {{else}}
 <div class="alert alert-warning alert-dismissible fade show col-12 text-center" role="alert">
     No hay tareas agregadas <a href="tasks/add" class="alert-link">agrega mas tareas aqui</a>.

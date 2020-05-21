@@ -14,7 +14,7 @@ router.get("/tasks", isLoggedIn, async (req, res) => {
   ]);
   res.render("tasks/list", { tasks });
 });
-
+//COMPLETED TASKS
 // router.get("/tasks/completed", isLoggedIn, async (req, res) => {
 //   const completedTasks = await pool.query(
 //     "SELECT * FROM tasks WHERE status = 1 AND user_id = ?",
