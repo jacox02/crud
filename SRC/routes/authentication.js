@@ -29,12 +29,6 @@ router.post("/signin", (req, res, next) => {
 });
 
 //Views getters
-router.get("/forgot", isNotLoggedIn, (req, res) => {
-  res.render("auth/resetPassword");
-});
-router.get("/changePass", isLoggedIn, (req, res) => {
-  res.render("auth/changePassword");
-});
 
 router.get("/profile", isLoggedIn, (req, res) => {
   res.render("profile");

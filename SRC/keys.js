@@ -1,8 +1,9 @@
 module.exports = {
   database: {
-    host: "remotemysql.com",
-    user: "zXJeEqJL3u",
-    password: "ziH5fBDBCu",
+    host: "codealodb.cbidlenaynyn.us-east-2.rds.amazonaws.com",
+    port: 3306,
+    user: "administrator",
+    password: "SIsi11--",
     database: "zXJeEqJL3u",
   },
 };
