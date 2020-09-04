@@ -10,7 +10,6 @@ pool.getConnection((err, connection) => {
     if (err.code === "PROTOCOL_CONNECTION_LOST") {
       console.error / "DATABASE CONNECTION WAS CLOSED";
     }
-
     if (err.code === "ER_CON_COUNT_ERROR") {
       console.error / "DATABASE HAS TOO MANY CONNECTIONS";
     }
@@ -20,8 +19,8 @@ pool.getConnection((err, connection) => {
   }
 
   if (connection) connection.release();
-  console.log("DB CONNECTED");
-  return;
+  console.log("Base de datos conectada");
+
 });
 //PROMISYFY POOL QUERYS
 pool.query = promisify(pool.query);
